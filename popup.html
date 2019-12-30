@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    :root{
+        --border-radius:3px;
+        --theme-color: rgb(0, 185, 0);
+    }
+      body{
+          width: 300px;
+          margin: 0;
+      }
+      header{
+          margin: 10px;;
+      }
+      button {
+        border: 0;
+        border-radius: var(--border-radius);
+        background: white;
+        padding: 0.75em;
+        outline: none;
+        color:black;
+      }
+      h1, h2{
+          color:black;
+          margin: 0;
+      }
+      .container{
+          display: grid;
+          grid-template-rows: auto auto;
+          row-gap: 8px;
+          margin: 10px 0 0 0;
+          background: var(--theme-color);
+          /*border: 2px solid rgba(0.5,255,255,255);*/
+          padding: 10px;
+      }
+      #all-urls{
+          height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1><span style="color: var(--theme-color);">LINE</span> TIMELINE</h1>
+        <h2>VIDEO DOWNLOADER</h2>
+    </header>
+    <div class="container">
+        <h2>You must manually load the entire page first!</h2>
+        <button id="listAllVideos">Scan Video URL</button>
+        <div id="available-articles-count"></div>
+        <div id="available-video-count"></div>
+        <h2>Target Folder Name</h2>
+        <input type="text" placeholder="ex. LineUser" id="target-folder">
+        <button id="download">Download</button>
+        <!--<textarea id="all-urls" ></textarea>-->
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
